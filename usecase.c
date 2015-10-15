@@ -7,7 +7,7 @@ int main (int argc, char const *argv[] )
    char c;
    FILE *fp1, *fp2;
   // opening the read file
-   fp1 = fopen("test1.html", "r");
+   fp1 = fopen("test2.html", "r");
    if (fp1 == NULL) {
       puts("cannot open this file");
       exit(1);
