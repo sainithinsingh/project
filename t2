@@ -1,0 +1,26 @@
+[ RUN      ] CxTest.LIRTest
+[       OK ] CxTest.LIRTest (0 ms)
+[ RUN      ] CxTest.LIRWrongOptionalParamsTest
+[       OK ] CxTest.LIRWrongOptionalParamsTest (0 ms)
+[ RUN      ] CxTest.LIRNoOptionalParamsTest
+[       OK ] CxTest.LIRNoOptionalParamsTest (0 ms)
+[ RUN      ] CxTest.LIATest
+[       OK ] CxTest.LIATest (1 ms)
+[ RUN      ] CxTest.LIATestExperimentalResultCode
+[       OK ] CxTest.LIATestExperimentalResultCode (0 ms)
+[ RUN      ] CxTest.LIATestNoServerName
+[       OK ] CxTest.LIATestNoServerName (0 ms)
+[ RUN      ] CxTest.LIATestNoCapabilities
+[       OK ] CxTest.LIATestNoCapabilities (0 ms)
+[ RUN      ] CxTest.LIATestCapabilitiesWithServerName
+[       OK ] CxTest.LIATestCapabilitiesWithServerName (0 ms)
+[ RUN      ] CxTest.RTTest
+[       OK ] CxTest.RTTest (0 ms)
+[ RUN      ] CxTest.RTTestNoIMPUsNoAssocatedIdentities
+[       OK ] CxTest.RTTestNoIMPUsNoAssocatedIdentities (0 ms)
+[ RUN      ] CxTest.PPTest
+[       OK ] CxTest.PPTest (0 ms)
+[ RUN      ] CxTest.PPTestNoChargingAddresses
+[       OK ] CxTest.PPTestNoChargingAddresses (0 ms)
+[----------] 28 tests from CxTest (31 ms total)
+

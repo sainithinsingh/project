@@ -1,0 +1,37 @@
+#!/bin/bash
+
+[ RUN      ] CxTest.MARTest
+[       OK ] CxTest.MARTest (1 ms)
+[ RUN      ] CxTest.MARAuthorizationTest
+[       OK ] CxTest.MARAuthorizationTest (0 ms)
+[ RUN      ] CxTest.MAATest
+[       OK ] CxTest.MAATest (0 ms)
+[ RUN      ] CxTest.SARTest
+[       OK ] CxTest.SARTest (0 ms)
+[ RUN      ] CxTest.SARNoImpiTest
+[       OK ] CxTest.SARNoImpiTest (0 ms)
+[ RUN      ] CxTest.SAATest
+[       OK ] CxTest.SAATest (0 ms)
+[ RUN      ] CxTest.SAATestNoChargingAddresses
+[       OK ] CxTest.SAATestNoChargingAddresses (0 ms)
+[ RUN      ] CxTest.UARTest
+[       OK ] CxTest.UARTest (0 ms)
+[ RUN      ] CxTest.UARAuthTypeDeregTest
+[       OK ] CxTest.UARAuthTypeDeregTest (0 ms)
+[ RUN      ] CxTest.UARAuthTypeCapabTest
+[       OK ] CxTest.UARAuthTypeCapabTest (0 ms)
+[ RUN      ] CxTest.UARNoAuthTypeTest
+[       OK ] CxTest.UARNoAuthTypeTest (0 ms)
+[ RUN      ] CxTest.UAATest
+[       OK ] CxTest.UAATest (0 ms)
+[ RUN      ] CxTest.UAATestExperimentalResultCode
+[       OK ] CxTest.UAATestExperimentalResultCode (0 ms)
+[ RUN      ] CxTest.UAATestNoServerName
+[       OK ] CxTest.UAATestNoServerName (0 ms)
+[ RUN      ] CxTest.UAATestNoCapabilities
+[       OK ] CxTest.UAATestNoCapabilities (1 ms)
+[ RUN      ] CxTest.UAATestCapabilitiesWithServerName
+[       OK ] CxTest.UAATestCapabilitiesWithServerName (0 ms)
+[ RUN      ] CxTest.LIRTest
+[       OK ] CxTest.LIRTest (0 ms)
+[ RUN      ] CxTest.LIRWrongOptionalParamsTest

@@ -1,0 +1,18 @@
+[----------] 8 tests from XmlUtilsTest
+[ RUN      ] XmlUtilsTest.SimpleMainline
+[       OK ] XmlUtilsTest.SimpleMainline (0 ms)
+[ RUN      ] XmlUtilsTest.Unregistered
+[       OK ] XmlUtilsTest.Unregistered (0 ms)
+[ RUN      ] XmlUtilsTest.InvalidRegState
+[       OK ] XmlUtilsTest.InvalidRegState (0 ms)
+[ RUN      ] XmlUtilsTest.InvalidIMSSubscription
+[       OK ] XmlUtilsTest.InvalidIMSSubscription (0 ms)
+[ RUN      ] XmlUtilsTest.InvalidXML
+[       OK ] XmlUtilsTest.InvalidXML (0 ms)
+[ RUN      ] XmlUtilsTest.GetIds
+[       OK ] XmlUtilsTest.GetIds (0 ms)
+[ RUN      ] XmlUtilsTest.GetIdsInvalidXml
+[       OK ] XmlUtilsTest.GetIdsInvalidXml (0 ms)
+[ RUN      ] XmlUtilsTest.GetIdsMissingIds
+[       OK ] XmlUtilsTest.GetIdsMissingIds (0 ms)
+
