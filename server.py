@@ -51,7 +51,8 @@ class CameraDevice():
         print("[INFO] loading YOLO from disk...")
         self.net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
         self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_INFERENCE_ENGINE)  
-        self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
+        #self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
+        self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
         self.ln = self.net.getLayerNames()
         self.ln = [self.ln[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
         
