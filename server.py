@@ -35,8 +35,8 @@ class CameraDevice():
         #self.cap.set(4, 480)
         
         # if the frame dimensions are empty, grab them
-        if W is None or H is None:
-            (H, W) = frame.shape[:2]
+        if self.W is None or H is None:
+            (self.H, self.W) = frame.shape[:2]
         
         
         # load the COCO class labels our YOLO model was trained on
@@ -68,8 +68,8 @@ class CameraDevice():
         ret, frame = self.cap.read()
         
         # if the frame dimensions are empty, grab them
-        if W is None or H is None:
-            (H, W) = frame.shape[:2]
+        if self.W is None or H is None:
+            (self.H, self.W) = frame.shape[:2]
             
         # construct a blob from the input frame and then perform a forward
         # pass of the YOLO object detector, giving us our bounding boxes
@@ -102,7 +102,7 @@ class CameraDevice():
                     # actually returns the center (x, y)-coordinates of
                     # the bounding box followed by the boxes' width and
                     # height
-                    box = detection[0:4] * np.array([W, H, W, H])
+                    box = detection[0:4] * np.array([self.W, self.H, self.W, self.H])
                     (centerX, centerY, width, height) = box.astype("int")
                     # use the center (x, y)-coordinates to derive the top
                     # and and left corner of the bounding box
@@ -325,4 +325,4 @@ if __name__ == '__main__':
     app.router.add_post('/offer', offer)
     app.router.add_get('/mjpeg', mjpeg_handler)
     app.router.add_get('/ice-config', config)
-    web.run_app(app, port=8080)
+    web.run_app(app, port=80)
