@@ -52,8 +52,8 @@ class CameraDevice():
         self.net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
         self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_INFERENCE_ENGINE)  
         self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
-        ln = self.net.getLayerNames()
-        ln = [ln[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
+        self.ln = self.net.getLayerNames()
+        self.ln = [self.ln[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
         
 
     def rotate(self, frame):
@@ -78,7 +78,7 @@ class CameraDevice():
         blob = cv2.dnn.blobFromImage(frame, 1 / 255.0, (416, 416), swapRB=True, crop=False)
         self.net.setInput(blob)
         start = time.time()
-        layerOutputs = self.net.forward(ln)
+        layerOutputs = self.net.forward(self.ln)
         end = time.time()
         # initialize our lists of detected bounding boxes, confidences,
         # and class IDs, respectively
@@ -326,4 +326,4 @@ if __name__ == '__main__':
     app.router.add_post('/offer', offer)
     app.router.add_get('/mjpeg', mjpeg_handler)
     app.router.add_get('/ice-config', config)
-    web.run_app(app, port=80)
+    web.run_app(app, port=8080)
