@@ -68,7 +68,7 @@ class CameraDevice():
         ret, frame = self.cap.read()
         
         # if the frame dimensions are empty, grab them
-        if self.W is None or H is None:
+        if self.W is None or self.H is None:
             (self.H, self.W) = frame.shape[:2]
             
         # construct a blob from the input frame and then perform a forward
