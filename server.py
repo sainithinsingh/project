@@ -11,6 +11,8 @@ CAMERA_DEVICE=os.getenv('CAMERA_STREAM_URL',0)
 class CameraDevice():
     def __init__(self):
         self.cap = cv2.VideoCapture(CAMERA_DEVICE)
+        self.cap.set(3, 416)
+        self.cap.set(4, 416)
         
         writer = None
         (self.W, self.H) = (None, None)
@@ -31,8 +33,7 @@ class CameraDevice():
         if not ret:
             print('Failed to open default camera. Exiting...')
             sys.exit()
-        #self.cap.set(3, 640)
-        #self.cap.set(4, 480)
+
         
         # if the frame dimensions are empty, grab them
         if self.W is None or self.H is None:
