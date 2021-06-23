@@ -13,7 +13,7 @@ class CameraDevice():
         self.cap = cv2.VideoCapture(CAMERA_DEVICE)
         
         writer = None
-        (W, H) = (None, None)
+        (self.W, self.H) = (None, None)
         # try to determine the total number of frames in the video file
         try:
             prop = cv2.cv.CV_CAP_PROP_FRAME_COUNT if imutils.is_cv2() \
@@ -35,7 +35,7 @@ class CameraDevice():
         #self.cap.set(4, 480)
         
         # if the frame dimensions are empty, grab them
-        if self.W is None or H is None:
+        if self.W is None or self.H is None:
             (self.H, self.W) = frame.shape[:2]
         
         
@@ -66,6 +66,7 @@ class CameraDevice():
 
     async def get_latest_frame(self):
         ret, frame = self.cap.read()
+        frame = cv2.resize(frame, (416, 416), interpolation=cv2.INTER_AREA)
         
         # if the frame dimensions are empty, grab them
         if self.W is None or self.H is None:
