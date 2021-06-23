@@ -66,7 +66,7 @@ class CameraDevice():
 
     async def get_latest_frame(self):
         ret, frame = self.cap.read()
-        frame = cv2.resize(frame, (416, 416), interpolation=cv2.INTER_AREA)
+        #frame = cv2.resize(frame, (416, 416), interpolation=cv2.INTER_AREA)
         
         # if the frame dimensions are empty, grab them
         if self.W is None or self.H is None:
